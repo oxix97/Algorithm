@@ -1,5 +1,5 @@
 import java.util.*;
-public class level1_prob_05 {
+public class level1_신규아이디추천 {
     private static String id;
     public static String NullCount(){
         String ans = "";

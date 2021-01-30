@@ -1,5 +1,5 @@
 import java.util.*;
-public class level1_prob_06 {
+public class level1_체육복 {
     public static int solution(int n, int[] lost, int[] reserve) {
         int answer = n;
         int[] clothes = new int[n];

@@ -1,5 +1,5 @@
 import java.util.*;
-public class level1_prob_04 {
+public class level1_모의고사 {
     public static int[] solution(int[] answers) {
         int[] one = {1, 2, 3, 4, 5};
         int[] two = {2, 1, 2, 3, 2, 4, 2, 5};

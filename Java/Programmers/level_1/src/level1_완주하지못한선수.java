@@ -1,5 +1,5 @@
 import java.util.*;
-public class level1_prob_03 {
+public class level1_완주하지못한선수 {
     static String solution(String[] participant, String[] completion){
         Arrays.sort(participant);
         Arrays.sort(completion);
