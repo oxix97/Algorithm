@@ -1,11 +1,11 @@
 import java.util.*;
 public class level1_문자열다루기기본_예외처리 {
-    public static boolean solution(String s) {
+    public static boolean solution(String s){
         try {
             Integer.parseInt(s);
-        }catch(NumberFormatException e ) {
+        }catch(NumberFormatException e ){
             return false;
-        }finally {
+        }finally{
             if(s.length() != 4 && s.length() != 6)
                 return false;
         }

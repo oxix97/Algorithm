@@ -3,19 +3,24 @@ public class level1_체육복 {
     public static int solution(int n, int[] lost, int[] reserve) {
         int answer = n;
         int[] clothes = new int[n];
+
         for(int l : lost)
             clothes[l-1]--;
+
         for(int r : reserve)
             clothes[r-1]++;
+
         for(int i=0;i<n;i++) {
             if(clothes[0]==-1 && clothes[1]==1) {
                 clothes[0]++;
                 clothes[1]--;
             }
+
             else if(clothes[n-1]==-1 && clothes[n-2]==1) {
                 clothes[n-2]--;
                 clothes[n-1]++;
             }
+
             else if(clothes[i]==-1) {
                 if(i>0 &&clothes[i-1]==1 ) {
                     clothes[i-1]--;
@@ -26,6 +31,7 @@ public class level1_체육복 {
                     clothes[i]++;
                 }
             }
+
             if(clothes[i]==-1)
                 answer--;
         }
