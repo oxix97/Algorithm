@@ -13,4 +13,5 @@ public class level1_수박수박수 {
         String result = solution(n);
         System.out.println(result);
     }
+
 }
