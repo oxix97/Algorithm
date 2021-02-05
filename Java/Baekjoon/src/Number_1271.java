@@ -9,6 +9,8 @@ public class Number_1271 {
         BigInteger n = new BigInteger(tokenizer.nextToken());
         BigInteger m = new BigInteger(tokenizer.nextToken());
 
+        
+
         System.out.println(n.divide(m));
         System.out.println(n.remainder(m));
     }
