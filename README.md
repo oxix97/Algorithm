@@ -7,7 +7,8 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
 
 
 - ### [레벨 1]
-  [레벨 1]: https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_1/src
+  [레벨 1]: 
+  https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_1/src
     - 2016년
     - 3진법 뒤집기
     - 가운데 글자 가져오기
@@ -24,8 +25,10 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 체육복
   
 ---
+
 ## [Baekjoon]
-[Baekjoon]: https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon
+[Baekjoon]: 
+https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon
 
 - ### [Bronze 5]
     - 문제 1271번
