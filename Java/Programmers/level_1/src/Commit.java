@@ -1,5 +1,10 @@
 public class Commit {
     public static void main(String[] args) {
-        System.out.println("커밋이 된건가??");
+        String a = "abca";
+        a = a.substring(1);
+        System.out.println(a);
+
+        a = a.substring(0,2);
+        System.out.println(a);
     }
 }
