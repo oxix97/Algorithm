@@ -15,9 +15,8 @@ public class level1_2016년 {
         check += b-1;
 
         //일주일을 반복하기 때문에 7로 나누어진 나머지가 해당 요일이다.
-        String answer = date[check%7];
 
-        return answer;
+        return date[check%7];
     }
     public static void main(String[] args) {
         String result = solution(5,24);
