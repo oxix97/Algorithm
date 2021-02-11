@@ -32,6 +32,7 @@ public class level1_문자열내마음대로정하기 {
     public static void main(String[] args) {
         String[] s1 = {"sun", "bed", "car"};
         String[] s2 = {"abce", "abcd", "cdx"};
+
         printInfo(s1,1);
         printInfo(s2,2);
     }
