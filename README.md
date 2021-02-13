@@ -27,6 +27,9 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 나누어 떨어지는 숫자 배열
     - 문자열 내 마음대로 정렬하기
     - 문자열 내림차순으로 배치하기
+    - 문자열 정수로 바꾸기
+    - 내적
+    - 이상한 문자 만들기
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
