@@ -35,8 +35,10 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 짝수와 홀수
     - 최대공약수와 최소공배
     - 평균 구하기 
-    - 핸드폰 번호 가리기
-  
+    - 핸드폰 번호 가리
+    - x만큼 간격이 있는 n개의 숫자
+
+
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
 ---
