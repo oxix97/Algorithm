@@ -30,6 +30,8 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 문자열 정수로 바꾸기
     - 내적
     - 이상한 문자 만들기
+    - 자연수 뒤집어 배열로 만들기
+    - 
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
@@ -170,7 +172,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 제로
   - 괄호
 
-- ### [큐, 덱](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/큐,덱)
+- ### [큐, 덱](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/큐,)
   - 큐 2 (실패)
   - 카드 2 (실패)
   - 요세푸스 문제 0
