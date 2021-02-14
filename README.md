@@ -31,7 +31,8 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 내적
     - 이상한 문자 만들기
     - 자연수 뒤집어 배열로 만들기
-    - 
+    - 정수 제곱근 판별
+    - 짝수와 홀수
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
