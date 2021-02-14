@@ -35,9 +35,9 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 124 나라의 숫자
 ---
 
-# [Baekjoon]()
+# [Baekjoon](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon)
 
-- ### [입출력과 사칙연산]()
+- ### [입출력과 사칙연산](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/입출력과사칙연산)
   - HelloWorld!
   - We love kriii
   - 고양이
@@ -50,14 +50,14 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 나머지
   - 곱셈
 
-- ### [if문]()
+- ### [if문](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/if문)
   - 두 수 비교하기
   - 시험 성적
   - 윤년
   - 사분면 고르기
   - 알람 시계
 
-- ### [for문]()
+- ### [for문](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/for문)
   - 구구단
   - A+B-3
   - 합
@@ -69,12 +69,12 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 별 찍기 2
   - X보다 작은 수
 
-- ### [while문]()
+- ### [while문](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/while문)
   - A+B-5
   - A+B-4
   - 더하기 사이클
 
-- ### [1차원 배열]()
+- ### [1차원 배열](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/1차원배열)
   - 최소, 최대
   - 최댓값
   - 숫자의 개수
@@ -83,12 +83,12 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - OX퀴즈
   - 평균은 넘겠지
 
-- ### [함수]()
+- ### [함수](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/함수)
   - 정수 N개의 합
   - 셀프 넘버
   - 한수
 
-- ### [문자열]()
+- ### [문자열](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/문자열)
   - 아스키 코드
   - 숫자의 합
   - 알파벳 찾기
@@ -100,7 +100,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 크로아티아 알파벳
   - 그룹 단어 체커
 
-- ### [기본수학1]()
+- ### [기초수학1](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/기초수학1)
   - 손익분기점
   - 벌집
   - 분수찾기
@@ -109,7 +109,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 부녀회장이 될테야
   - 설탕 배달
 
-- ### [기본수학2]()
+- ### [기초수학2](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/기초수학2)
   - 소수 찾기
   - 소수
   - 소인수분해
@@ -121,19 +121,19 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 직각삼각형
   - 택시 기하학 (실패)
 
-- ### [재귀]()
+- ### [재귀](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/재귀)
   - 팩트리얼
   - 피보나치 수 5
   - 별 찍기 10
   - 하노이 탑 이동 순서
 
-- ### [브루트 포스]()
+- ### [브루트 포스](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/브루트포스)
   - 블랙잭
   - 분해합
   - 덩치
   - 영화감독 숌
 
-- ### [정렬]()
+- ### [정렬](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/정렬)
   - 수 정렬하기
   - 수 정렬하기 2
   - 수 정렬하기 3
@@ -142,20 +142,20 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 좌표 정렬하기 2
   - 단어 정렬
 
-- ### [백트레킹]()
+- ### [백트레킹](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/백트레킹)
   - N과 M(1)
   - N과 M(2) (실패)
 
-- ### [동적계획법1]()
+- ### [동적계획법1](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/동적계획법1)
   - 피보나치 함수
   - 정수 삼각형 (실패)
   - 1로 만들기 (실패)
 
-- ### [그라디 알고리즘]()
+- ### [그라디 알고리즘](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/그리디알고리즘)
   - 동전 0
   - ATM
 
-- ### [정수론 및 조합론]()
+- ### [정수론 및 조합론](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/정수론및조합론)
   - 배수와 약수
   - 약수
   - 최대공약수와 최소공배수
@@ -165,12 +165,12 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
   - 패션왕 신해빈
   - 팩토리얼 0의 개수
 
-- ### [스택]()
+- ### [스택](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/스택)
   - 스택
   - 제로
   - 괄호
 
-- ### [큐, 덱]()
+- ### [큐, 덱](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon/큐,덱)
   - 큐 2 (실패)
   - 카드 2 (실패)
   - 요세푸스 문제 0
