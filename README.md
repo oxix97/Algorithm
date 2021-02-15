@@ -38,6 +38,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 핸드폰 번호 가리
     - x만큼 간격이 있는 n개의 숫자
     - 시저 암호
+    - 약수의 합
 
 
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
