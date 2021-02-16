@@ -1,6 +1,6 @@
 import java.util.*;
 public class level1_제일작은수제거하기 {
-    public static int[] solution(int[] arr){
+    /*public static int[] solution(int[] arr){
         if(arr.length==1) return new int[]{-1};
 
         List<Integer> list = new ArrayList<>();
@@ -16,6 +16,11 @@ public class level1_제일작은수제거하기 {
 
         return answer;
 
+    } */
+    public static int[] solution(int[] arr){
+        if(arr.length==1) return new int[]{-1};
+        OptionalInt min = Arrays.stream(arr).min();
+        return Arrays.stream(arr).filter(i -> i != min.getAsInt()).toArray();
     }
     public static void main(String[] args) {
         int[] a1 = {4,3,2,1};
