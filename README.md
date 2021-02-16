@@ -42,6 +42,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 자릿수 더하기
     - 정수 내림차순으로 배열하기
     - 제일 작은 수 제거하기
+    - 콜라츠 추측 
     
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
