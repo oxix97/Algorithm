@@ -46,6 +46,8 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 하샤드 수
     - 행렬의 덧셈기
     - 직사각형 별찍
+    - 예산
+  
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
 ---
