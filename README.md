@@ -45,8 +45,9 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 콜라츠 추측 
     - 하샤드 수
     - 행렬의 덧셈기
-    - 직사각형 별찍
+    - 직사각형 별찍율
     - 예산
+    - 실패
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
