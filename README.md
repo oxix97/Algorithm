@@ -47,7 +47,8 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 행렬의 덧셈기
     - 직사각형 별찍율
     - 예산
-    - 실패
+    - 실패율
+    - 1차 비밀지도
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
