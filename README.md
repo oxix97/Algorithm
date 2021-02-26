@@ -54,7 +54,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 124 나라의 숫자
     - 기능개발
     - 멀쩡한 사각형
-
+    - 주식 가격
 ---
 # [Baekjoon](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon)
 
