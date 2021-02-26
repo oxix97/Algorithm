@@ -53,6 +53,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
     - 기능개발
+    - 멀쩡한 사각형
 
 ---
 # [Baekjoon](https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon)
