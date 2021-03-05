@@ -163,3 +163,100 @@ max = 4, min = 2 if 조건 만족하여 return min; -> 최대 공약수는 2가 
 ver.1 과 같은 최대 공약수 구하는 순환 이다. <br>
 ver.1 와는 다르게 대_소 관계를 정하지 않아도 되며 반복 하면서 0에 수렴하게 된다. <br>
 대소 관계를 정하지 않고 간편한 대신에 수가 커지는 만큼 반복 회수 차이도 난다.
+
+---
+지금까지는 순환은 수학적으로 사용을 했지만 실은 그렇지 않은 경우도 많다. 실생활에 사용하는 함수 역시 순환으로 표현이 가능하다.
+
+#### 문자열의 길이 계산
+
+~~~java
+public static int length(String str) {
+    if(str.equals("")) return 0;
+    
+    else return 1 + length(str.substring(1));
+}
+~~~
+
+#### 문자열의 프린트
+
+~~~java
+public static void printChars(String str) {
+    if (str.length() == 0) {
+        return;
+    } else {
+        System.out.print(str.charAt(0));
+        printChars(str.substring(1));
+    }
+}
+~~~
+
+#### 문자열 뒤집기
+
+~~~java
+public static void printCharsReverse(String str) {
+    if (str.length() == 0) {
+        return;
+    } else {
+        printCharsReverse(str.substring(1));
+        System.out.print(str.charAt(0));
+    }
+}
+~~~
+
+---
+
+#### 순환문 vs 반복문
+
+위의 코드들은 모두 반복문으로 구현이 가능하며 그 역의 경우 역시 성립한다. <br>
+
+**장점 :** 복잡한 알고리즘을 단순하고 알기쉽게 표현하는 것을 가능하게 한다.
+
+**단점 :** 함수 호출에 따른 오버헤드가 있다. (매개변수 전달, 엑티베이션 프레임 생성 등등)
+
+---
+
+#### 순차 탐색 (반복문) 
+조건 : 0 < n < arr.length
+~~~java
+public static int search(int[] arr, int n, int target) {
+    for (int i = 0; i < n; i++) {
+        if(arr[i] == target) return i;
+    }
+    return -1;
+}
+~~~
+
+#### 순차탐색 (순환)
+
+~~~java
+public static int search(int[] arr, int begin, int end, int target) {
+    if (begin > end) {
+        return -1;
+    } else if (target == arr[begin]) {
+        return begin;
+    } else {
+        return search(arr, begin + 1, end, target);
+    }
+}
+~~~
+
+#### 이진검색 (순환)
+
+~~~java
+ public static int BinarySearch(String[] arr, String target, int begin, int end) {
+    if (begin > end) {
+        return -1;
+    } else {
+        int mid = (begin + end) / 2;
+        int result = target.compareTo(arr[mid]);
+        
+        if (result == 0) {
+            return mid;
+        } else if (result < 0) {
+            return BinarySearch(arr, target, begin, mid - 1);
+        } else {
+            return BinarySearch(arr, target, mid + 1, end);
+        }
+    }
+}
+~~~

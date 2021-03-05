@@ -6,6 +6,7 @@ public class RecursionTest {
         int sr = sampleGcd(5,7);
         System.out.println(result);
         System.out.println(sr);
+
     }
 
     public static int sampleGcd(int p, int q) {
