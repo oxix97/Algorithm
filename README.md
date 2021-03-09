@@ -7,7 +7,8 @@
 ## <div id = "Theory"> Algorithm_Theory </div>
 
 - #### [순환 (Recursion)](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/순환.md)
-    - [미로찾기](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/Maze.class)
+    - [미로찾기](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/Maze.java)
+    - [Counting Cells in a Blob](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/CountingCells.java)
 ---
 ## <div id = "Programmers"> [Programmers] </div>
 [Programmers]: 
