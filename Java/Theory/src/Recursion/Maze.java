@@ -1,18 +1,13 @@
 package Recursion;
 import java.util.*;
 
-enum Define {
-    PATHWAY_COLOUR,
-    WALL_COLOUR,
-    BLOCKED_COLOUR,
-    PATH_COLOUR
-}
 public class Maze {
+
+    private static final int PATHWAY_COLOUR = 0;
+    private static final int WALL_COLOUR = 1;
+    private static final int BLOCKED_COLOUR = 2;
+    private static final int PATH_COLOUR = 3;
     private static int N = 8;
-    static final int pathway = 0;
-    static final int wall = 1;
-    static final int blocked = 2;
-    static final int path = 3;
 
     private static int[][] maze = {
             {0,0,0,0,0,0,0,1},
@@ -28,17 +23,18 @@ public class Maze {
     public static boolean findMazePath(int x, int y) {
         if (x < 0 || y < 0 || x >= N || y >= N) {
             return false;
-        } else if (maze[x][y] != pathway) {
+        } else if (maze[x][y] != PATHWAY_COLOUR) {
             return false;
         } else if (x == N - 1 && y == N - 1) {
-            maze[x][y] = path;
+            maze[x][y] = PATH_COLOUR;
             return true;
         } else {
+            maze[x][y] = PATH_COLOUR;
             if (findMazePath(x - 1, y) || findMazePath(x, y + 1) ||
                     findMazePath(x + 1, y) || findMazePath(x, y - 1)) {
                 return true;
             }
-            maze[x][y] = blocked;
+            maze[x][y] = BLOCKED_COLOUR;
             return false;
         }
     }
@@ -52,6 +48,7 @@ public class Maze {
             System.out.print("}");
             System.out.println();
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
