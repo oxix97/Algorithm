@@ -65,6 +65,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 멀쩡한 사각형
     - 주식 가격
     - 스킬트리
+    - 프린터
 ---
 ## <div id = "Baekjoon"> [Baekjoon] </div>
   [Baekjoon]:(https://github.com/oxix97/Algorithm/tree/master/Java/Baekjoon)
