@@ -9,6 +9,7 @@
 - #### [순환 (Recursion)](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/순환.md)
     - [미로찾기](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/Maze.java)
     - [Counting Cells in a Blob](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/CountingCells.java)
+    - [N queens](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/N_queens.java) 
 ---
 ## <div id = "Programmers"> [Programmers] </div>
 [Programmers]: 
