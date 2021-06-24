@@ -61,6 +61,7 @@ https://github.com/oxix97/Algorithm/tree/master/Java/Programmers
     - 예산
     - 실패율
     - 1차 비밀지도
+    - 키패드 누르기
   
 - ### [레벨2](https://github.com/oxix97/Algorithm/tree/master/Java/Programmers/level_2/src)
     - 124 나라의 숫자
