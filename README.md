@@ -8,12 +8,24 @@
 
 ## <div id = "Theory"> Algorithm_Theory </div>
 
-- #### [순환 (Recursion)](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/순환.md)
-    - [미로찾기](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/Maze.java)
-    - [Counting Cells in a Blob](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion/CountingCells.java)
-    - [N queens](https://github.com/oxix합97/Algorithm/blob/master/Java/Theory/src/Recursion/N_queens.java)
-    - [멱집합](https://github.com/oxix합97/Algorithm/blob/master/Java/Theory/src/Recursion/PowerSet.java)
+- #### [순환](https://github.com/oxix97/Algorithm/blob/master/Java/Theory/src/Recursion)
+    - 미로찾기
+    - Counting Cells in a Blob
+    - N queens
+    - 멱집합
 
+- #### [탐욕적 알고리즘](https://github.com/oxix97/Algorithm/tree/master/Theory/src/Greedy)
+  - 1이 될 때 까지
+  - 거스름돈
+  - 숫자 카드 게임
+  - 큰 수의 법칙
+
+- #### [구현](https://github.com/oxix97/Algorithm/tree/master/Theory/src/implementation)
+  - 게임 개발
+  - 사각
+  - 상하좌우
+  - 왕실의 나이트
+  
 ---
 
 ## <div id = "Programmers"> [Programmers] </div>
