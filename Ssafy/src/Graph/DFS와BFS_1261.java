@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class DFS와BFS_1261 {
     static Scanner sc = new Scanner(System.in);
     static UtilClass util = new UtilClass();
+    static boolean visitedDfs[];
 
     public static void main(String[] args) {
         HashMap<Integer, ArrayList<Integer>> graph = new HashMap<>();
@@ -17,7 +18,7 @@ public class DFS와BFS_1261 {
         int nodes = sc.nextInt();
         int vertex = sc.nextInt();
         int startNode = sc.nextInt();
-
+        visitedDfs = new boolean[vertex + 1];
         for (int i = 1; i <= nodes; i++) {
             graph.put(i, new ArrayList<>(1));
         }
@@ -57,9 +58,30 @@ public class DFS와BFS_1261 {
         else if (graph.get(startNode) == null) {
             System.out.println(startNode);
         } else {
+            System.out.println(graph);
+            result = dfs(graph, startNode);
+//            util.printIntegerList(result);
+            System.out.println();
+            result.clear();
             result = bfs(graph, startNode);
+            util.printIntegerList(result);
         }
-        util.printIntegerList(result);
+    }
+
+    public static ArrayList<Integer> dfs(HashMap<Integer, ArrayList<Integer>> graph, int startNode) {
+        ArrayList<Integer> visited = new ArrayList<>();
+        ArrayList<Integer> needVisit = new ArrayList<>();
+        needVisit.add(startNode);
+
+        while (needVisit.size() > 0) {
+            int node = needVisit.remove(needVisit.size() - 1); // BFS와 이 부분만 다름 (큐 -> 스택)
+            if (!visited.contains(node)) {
+
+                visited.add(node);
+                needVisit.addAll(graph.get(node));
+            }
+        }
+        return visited;
     }
 
     public static ArrayList<Integer> bfs(HashMap<Integer, ArrayList<Integer>> graph, int startNode) {
