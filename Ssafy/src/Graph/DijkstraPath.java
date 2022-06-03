@@ -8,7 +8,6 @@ import java.util.PriorityQueue;
 
 public class DijkstraPath {
     public HashMap<String, Integer> dijkstraFunc(HashMap<String, ArrayList<UtilClass.Edge>> graph, String start) {
-        ArrayList<UtilClass.Edge> nodeList;
 
         HashMap<String, Integer> distances = new HashMap<String, Integer>();
 
@@ -36,6 +35,7 @@ public class DijkstraPath {
                 continue;
             }
 
+            ArrayList<UtilClass.Edge> nodeList;
             nodeList = graph.get(currentNode);
 
             for (int index = 0; index < nodeList.size(); index++) {

@@ -1,12 +1,14 @@
 package Sort;
 
+import Util.UtilClass;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Selection {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
-        SortUtil util = new SortUtil();
+        UtilClass util = new UtilClass();
         util.inputRandomValue(list);
 
         int lowest;
@@ -20,6 +22,6 @@ public class Selection {
             Collections.swap(list, lowest, i);
         }
 
-        util.printList(list);
+        util.printIntegerList(list);
     }
 }

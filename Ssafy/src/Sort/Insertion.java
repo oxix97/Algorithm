@@ -1,11 +1,13 @@
 package Sort;
 
+import Util.UtilClass;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Insertion {
     public static void main(String[] args) {
-        SortUtil util = new SortUtil();
+        UtilClass util = new UtilClass();
         ArrayList<Integer> list = new ArrayList<>();
         util.inputRandomValue(list);
 
@@ -19,6 +21,6 @@ public class Insertion {
             }
         }
 
-        util.printList(list);
+        util.printIntegerList(list);
     }
 }
