@@ -23,7 +23,8 @@ public class 음료수얼려먹기 {
     }
 
     private static boolean dfs(int x, int y) {
-        if (x < 0 || x >= N || y < 0 || y >= M) return false;
+        if (x < 0 || x >= N || y < 0 || y >= M)
+            return false;
 
         //방문하지 않은 얼음
         if (graph[x][y] == 0) {
