@@ -9,7 +9,5 @@ public class 게임개발 {
         int M = sc.nextInt();
 
 
-
-
     }
 }

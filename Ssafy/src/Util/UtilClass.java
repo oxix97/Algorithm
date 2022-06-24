@@ -10,7 +10,20 @@ public class UtilClass {
         }
     }
 
+    public void inputRandomValue(int[] list) {
+        for (int i = 0; i < 100; i++) {
+            list[i] =(int) (Math.random() * 100 + 1);
+        }
+    }
+
     public void printIntegerList(ArrayList<Integer> list) {
+        for (int i : list) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public void printIntegerList(int[] list) {
         for (int i : list) {
             System.out.print(i + " ");
         }
