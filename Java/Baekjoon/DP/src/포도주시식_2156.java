@@ -25,14 +25,9 @@ public class 포도주시식_2156 {
             dp[2] = arr[1] + arr[2];
 
         for (int i = 3; i <= n; i++) {
-//            dp[i] = Math.max(dp[i - 2], dp[i - 3] + arr[i - 1]) + arr[i];
             dp[i] = Math.max(dp[i - 1], Math.max(dp[i - 2] + arr[i], dp[i - 3] + arr[i - 1] + arr[i]));
         }
-//        for (int i : dp) {
-//            System.out.print(i + " ");
-//        }
-//        System.out.println();
-//        Arrays.sort(dp);
+
         System.out.println(dp[n]);
     }
 }
