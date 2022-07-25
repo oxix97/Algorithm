@@ -21,7 +21,6 @@ public class 스택수열_1874 {
             if (arr[i] > cnt) {
                 for (int j = cnt + 1; j <= arr[i]; j++) {
                     s.push(j);
-                    System.out.println(s.peek());
                     sb.append('+').append('\n');
                 }
                 cnt = arr[i];
@@ -29,7 +28,7 @@ public class 스택수열_1874 {
                 System.out.println("NO");
                 return;
             }
-            System.out.println(s.pop());
+            s.pop();
             sb.append('-').append('\n');
         }
 
