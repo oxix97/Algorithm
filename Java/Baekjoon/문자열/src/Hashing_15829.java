@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigInteger;
 
 public class Hashing_15829 {
     static int L;
@@ -11,17 +12,17 @@ public class Hashing_15829 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         L = Integer.parseInt(br.readLine());
         str = br.readLine();
-        long result = 0;
+        BigInteger result = new BigInteger("0");
 
         for (int i = 0; i < L; i++) {
-            int tmp = str.charAt(i) - 'a' + 1;
-            result += funcHash(tmp, i);
+            int tmp = str.charAt(i) - 96;
+            result = result.add(funcHash(tmp, i));
         }
-        System.out.println(result);
+        System.out.println(result.remainder(BigInteger.valueOf(M)));
     }
 
-    private static int funcHash(int tmp, int cnt) {
-        final int num = (int) Math.pow(31, cnt);
-        return (num * tmp) % M;
+    private static BigInteger funcHash(int tmp, int cnt) {
+        final BigInteger num = BigInteger.valueOf(31).pow(cnt);
+        return num.multiply(BigInteger.valueOf(tmp));
     }
 }
