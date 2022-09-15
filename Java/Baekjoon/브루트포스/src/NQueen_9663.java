@@ -13,14 +13,13 @@ public class NQueen_9663 {
     public static void main(String[] args) throws IOException {
         initial();
         recursion(1);
-
+        sb.append(ans);
+        System.out.println(sb.toString());
     }
 
     private static void initial() throws IOException {
         N = Integer.parseInt(br.readLine());
         col = new int[N + 1];
-        sb.append(ans);
-        System.out.println(sb.toString());
     }
 
     static void recursion(int row) {
@@ -30,7 +29,7 @@ public class NQueen_9663 {
             for (int i = 1; i <= N; i++) {
                 boolean possible = true;
                 for (int j = 1; j <= row - 1; j++) {
-                    if (attackable(i, j, row, col[j])) {
+                    if (attackable(row, i, j, col[j])) {
                         possible = false;
                         break;
                     }
@@ -44,10 +43,10 @@ public class NQueen_9663 {
         }
     }
 
-    static boolean attackable(int i, int j, int row, int col) {
-        if (row == col) return true;
-        if (i - j == row - col) return true;
-        if (i + j == row + col) return true;
+    static boolean attackable(int row, int i, int j, int col) {
+        if (i == col) return true;
+        if (row - i == j - col) return true;
+        if (row + i == j + col) return true;
         return false;
     }
 }
