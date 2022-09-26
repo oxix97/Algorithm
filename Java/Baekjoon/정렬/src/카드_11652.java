@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class 카드_11652 {
     static StringBuilder sb = new StringBuilder();
@@ -18,7 +16,8 @@ public class 카드_11652 {
     }
 
     static void sorted() {
-        int cnt = 1, maxCnt = 1, maxIdx = 0;
+        int cnt = 1, maxCnt = 1;
+        long maxValue = arr[0];
         for (int i = 1; i < T; i++) {
             if (arr[i - 1] == arr[i]) {
                 cnt++;
@@ -27,10 +26,10 @@ public class 카드_11652 {
             }
             if (maxCnt < cnt) {
                 maxCnt = cnt;
-                maxIdx = i;
+                maxValue = arr[i];
             }
         }
-        sb.append(arr[maxIdx]);
+        sb.append(maxValue);
         System.out.println(sb.toString());
     }
 
