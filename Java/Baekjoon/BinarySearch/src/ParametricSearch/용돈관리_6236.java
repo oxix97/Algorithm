@@ -22,7 +22,7 @@ public class 용돈관리_6236 {
     }
 
     private static void outputs() {
-        int L = max, R = 10_000 * 100_000, K = 0;
+        int L = max, R = sum, K = 0;
         while (L <= R) {
             int mid = (L + R) / 2;
             if (M >= check(mid)) {
