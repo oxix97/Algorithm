@@ -10,9 +10,15 @@ public class DefaultInput {
 
     public static void main(String[] args) throws IOException {
         inputs();
+        solution();
+        System.out.println(sb.toString());
     }
 
-    private static void inputs() throws IOException{
+    private static void solution() {
+
+    }
+
+    private static void inputs() throws IOException {
 
     }
 }
