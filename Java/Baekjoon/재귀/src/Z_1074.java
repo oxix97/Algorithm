@@ -28,19 +28,19 @@ public class Z_1074 {
         int newSize = size / 2;
 
         if (R < r + newSize && C < c + newSize) { //1
-//            System.out.println(1);
+            System.out.println(1+" , cnt : "+cnt);
             check(r, c, newSize);
         } else if (R < r + newSize && C >= c + newSize) { //2
-//            System.out.println(2);
             cnt += (size * size) / 4;
+            System.out.println(2+" , cnt : "+cnt);
             check(r, c + newSize, newSize);
         } else if (R >= r + newSize && C < c + newSize) {//3
-//            System.out.println(3);
             cnt += ((size * size) / 4) * 2;
+            System.out.println(3+" , cnt : "+cnt);
             check(r + newSize, c, newSize);
         } else {//4
-//            System.out.println(4);
             cnt += ((size * size) / 4) * 3;
+            System.out.println(4+" , cnt : "+cnt);
             check(r + newSize, c + newSize, newSize);
         }
     }
