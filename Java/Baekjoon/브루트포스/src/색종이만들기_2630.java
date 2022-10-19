@@ -54,7 +54,7 @@ public class 색종이만들기_2630 {
 
     private static void inputs() throws IOException {
         N = Integer.parseInt(br.readLine());
-        arr = new int[N + 1][N + 1];
+        arr = new int[N][N];
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
