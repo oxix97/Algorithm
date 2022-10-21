@@ -28,25 +28,14 @@ public class 좋다_1253 {
     }
 
     private static boolean recursion(int index) {
-        int L = 1, R = index;
+        int L = 1, R = N;
         while (L < R) {
-            int mid = (L + R) / 2;
-            int value = arr[index] - arr[mid];
-            int rL = L, rR = mid, rMid = 0;
-            while (L < mid) {
-                rMid = (rL + rR) / 2;
-                if (value - arr[rMid] > 0) {
-                    rL = rMid + 1;
-                } else if (value - arr[rMid] == 0) {
-                    return true;
-                } else {
-                    rR = mid - 1;
-                }
-            }
-            if (value - arr[rMid] > 0) {
-                L = mid + 1;
-            } else {
-                R = mid - 1;
+            if (L == index) L++;
+            else if (R == index) R--;
+            else {
+                if (arr[L] + arr[R] == arr[index]) return true;
+                else if (arr[L] + arr[R] > arr[index]) R--;
+                else L++;
             }
         }
         return false;
