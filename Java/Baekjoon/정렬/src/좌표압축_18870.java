@@ -20,7 +20,7 @@ public class 좌표압축_18870 {
     private static void solution() {
         for (int i = 0; i < N; i++) {
             int num = list.get(i);
-            sb.append(sortedList.indexOf(num)).append(' ');
+            sb.append(Collections.binarySearch(sortedList, num)).append(' ');
         }
     }
 
