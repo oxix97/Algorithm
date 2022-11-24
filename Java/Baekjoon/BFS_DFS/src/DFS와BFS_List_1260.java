@@ -73,6 +73,10 @@ public class DFS와BFS_List_1260 {
             list[n].add(m);
             list[m].add(n);
         }
+
+        for (int i = 1; i <= N; i++) {
+            Collections.sort(list[i]);
+        }
     }
 
 }
