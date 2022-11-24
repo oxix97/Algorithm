@@ -23,7 +23,7 @@ public class DFS와BFS_1260 {
     private static void solution() {
         dfs(V);
         sb.append('\n');
-        Arrays.fill(visited,false);
+        Arrays.fill(visited, false);
         bfs(V);
     }
 
@@ -35,7 +35,6 @@ public class DFS와BFS_1260 {
         while (!q.isEmpty()) {
             int item = q.poll();
             sb.append(item).append(' ');
-
             for (int i = 1; i <= N; i++) {
                 if (arr[item][i] == 0 || visited[i]) continue;
                 q.add(i);
@@ -67,7 +66,8 @@ public class DFS와BFS_1260 {
             st = new StringTokenizer(br.readLine());
             int n = Integer.parseInt(st.nextToken());
             int m = Integer.parseInt(st.nextToken());
-            arr[n][m]++;
+            arr[n][m] = 1;
+            arr[m][n] = 1;
         }
     }
 }
