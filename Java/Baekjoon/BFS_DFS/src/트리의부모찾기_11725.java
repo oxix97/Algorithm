@@ -1,70 +1,81 @@
+import com.sun.security.jgss.GSSUtil;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class 트리의부모찾기_11725 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
     static StringTokenizer st;
-    static int T;
+    static int N;
     static ArrayList<Integer>[] list;
-    static int[] parents;
-    static boolean[] visited;
+    static int[] visited;
 
     public static void main(String[] args) throws IOException {
         inputs();
         solution();
-        System.out.println(sb.toString());
     }
 
     private static void solution() {
-        for (int i = 1; i < T; i++) {
-            if (!visited[i]) {
-                System.out.println("-----------------");
-                dfs(i);
-            }
+        init();
+        bfs(1);
+        printResult();
+    }
+
+    private static void printResult() {
+        for (int i = 2; i <= N; i++) {
+            sb.append(visited[i]).append('\n');
         }
-        for (int i = 2; i <= T; i++) {
-            sb.append(parents[i]).append('\n');
+        System.out.println(sb.toString());
+    }
+
+    private static void init() {
+        visited[1] = 1;
+        for (int i : list[1]) {
+            visited[i] = 1;
         }
     }
 
-    private static void dfs(int n) {
-        if (visited[n]) return;
+    private static void bfs(int n) {
+        Queue<Integer> q = new LinkedList<>(list[n]);
 
-        visited[n] = true;
+        for (int i : q) {
+            if (visited[i] != 0) continue;
+            visited[i] = n;
+        }
 
-        for (int i : list[n]) {
-            if (!visited[i]) {
-                parents[i] = n;
-                System.out.println("parents["+i+"] = "+parents[i]);
-                dfs(i);
+        while (!q.isEmpty()) {
+            int num = q.poll();
+
+            for (int i = 0; i < list[num].size(); i++) {
+                int item = list[num].get(i);
+                if (visited[item] == 0) {
+                    visited[item] = num;
+                    q.add(item);
+                }
             }
         }
+
     }
 
     private static void inputs() throws IOException {
-        T = Integer.parseInt(br.readLine());
-        list = new ArrayList[T + 1];
-        parents = new int[T + 1];
-        visited = new boolean[T + 1];
-
-        for (int i = 1; i <= T; i++)
+        N = Integer.parseInt(br.readLine());
+        list = new ArrayList[N + 1];
+        visited = new int[N + 1];
+        for (int i = 0; i <= N; i++) {
             list[i] = new ArrayList<>();
-
-        for (int i = 1; i < T; i++) {
-            st = new StringTokenizer(br.readLine());
-            int n = Integer.parseInt(st.nextToken());
-            int m = Integer.parseInt(st.nextToken());
-
-            list[n].add(m);
-            list[m].add(n);
         }
 
-        Arrays.fill(visited, false);
-        Arrays.fill(parents, 0);
+        for (int i = 1; i < N; i++) {
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            list[a].add(b);
+            list[b].add(a);
+        }
+        Arrays.fill(visited, 0);
     }
 }
