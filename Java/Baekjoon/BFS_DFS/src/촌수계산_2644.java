@@ -10,42 +10,27 @@ public class 촌수계산_2644 {
     static int T, N;
     static ArrayList<Integer>[] list;
     static int a, b;
-    static boolean[] visited;
-    static int ans = 0;
+    static int[] dist;
 
     public static void main(String[] args) throws IOException {
         inputs();
-        int[][] tmp = {{a, b}, {b, a}};
-        int answer = 0;
-        for (int i = 0; i < 1; i++) {
-            Arrays.fill(visited, false);
-            answer = solution(tmp[i][0], tmp[i][1]);
-        }
-        System.out.println(answer);
+        solution(a);
+        System.out.println(dist[b]);
     }
 
-    private static int solution(int v, int target) {
-        int num = v;
-        int answer = 0;
-        visited[num] = true;
-        while (true) {
-            boolean find = false;
-            for (int i = 1; i <= N; i++) {
-                if (list[i].contains(num)) {
-                    num = i;
-                    answer++;
-                    visited[num] = true;
-                    find = true;
-                    break;
-                }
+    private static void solution(int n) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(n);
+        dist[n] = 0;
+
+        while (!q.isEmpty()) {
+            int tmp = q.poll();
+            for (int i : list[tmp]) {
+                if (dist[i] != -1) continue;
+                q.add(i);
+                dist[i] = dist[tmp] + 1;
             }
-            if (find && num == target) {
-                return answer;
-            } else if (find && list[num].contains(target)) {
-                return answer + 1;
-            } else if (!find) break;
         }
-        return -1;
     }
 
     private static void inputs() throws IOException {
@@ -55,10 +40,11 @@ public class 촌수계산_2644 {
         b = Integer.parseInt(st.nextToken());
         N = Integer.parseInt(br.readLine());
         list = new ArrayList[T + 1];
-        visited = new boolean[T + 1];
+        dist = new int[T + 1];
 
         for (int i = 0; i <= T; i++) {
             list[i] = new ArrayList<>();
+            dist[i] = -1;
         }
 
         for (int i = 1; i <= N; i++) {
