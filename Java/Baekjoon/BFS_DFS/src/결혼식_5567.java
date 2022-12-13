@@ -18,23 +18,29 @@ public class 결혼식_5567 {
 
     private static void solution() {
         bfs();
+        output();
+    }
+
+    private static void output() {
+        int cnt = 0;
+        for (int i = 2; i <= N; i++) {
+            if (visited[i]) ++cnt;
+        }
+        System.out.println(cnt);
     }
 
     private static void bfs() {
         Queue<Integer> q = new LinkedList<>(list[1]);
-        visited[1] = true;
-        int cnt = 0;
 
         while (!q.isEmpty()) {
             int n = q.poll();
+            visited[n] = true;
+
             for (int i : list[n]) {
                 if (visited[i]) continue;
                 visited[i] = true;
-                cnt++;
             }
         }
-
-        System.out.println(cnt);
     }
 
     private static void inputs() throws IOException {
