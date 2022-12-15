@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class 탈출_3055 {
@@ -12,102 +14,100 @@ public class 탈출_3055 {
     static char[][] arr;
     static int[] S = {0, 0};
     static int[] D = {0, 0};
-    static int[][] dist;
-    static int answer = Integer.MAX_VALUE;
+    static int[][] waterDist;
+    static int[][] biberDist;
     static int[][] move = {
             {-1, 0}, {1, 0}, {0, -1}, {0, 1}
     };
 
-
     public static void main(String[] args) throws IOException {
         inputs();
         solution();
+        output();
     }
 
-    private static void solution() {
-        //현 위치 초기화
-        int y = S[0];
-        int x = S[1];
-        dist[y][x] = 0;
-
-        //물 흐르게 하고
-
-        for (int i = 0; i < Math.max(R, C); i++) {
-            spreadWater();
-            for (int j = 0; j < R; j++) {
-                for (int k = 0; k < C; k++) {
-                    if (dist[y][x] != -1)
-                        moveS(j, k);
-                }
-            }
-        }
-
-        //고슴도치 이동
-
-
-        int resultY = D[0];
-        int resultX = D[1];
-
-        if (dist[resultY][resultX] == -1)
+    private static void output() {
+        int result = biberDist[D[0]][D[1]];
+        if (result == -1)
             sb.append("KAKTUS");
         else
-            sb.append(dist[resultY][resultX]);
+            sb.append(result);
 
-//        for (int i = 0; i < R; i++) {
-//            for (int j = 0; j < C; j++) {
-//                sb.append(dist[i][j]).append(' ');
-//            }
-//            sb.append('\n');
-//        }
-//
-//        for (int i = 0; i < R; i++) {
-//            for (int j = 0; j < C; j++) {
-//                sb.append(arr[i][j]).append(' ');
-//            }
-//            sb.append('\n');
-//        }
         System.out.println(sb.toString());
     }
 
-    private static void spreadWater() {
-        for (int i = 0; i < R; i++) {
-            for (int j = 0; j < C; j++) {
-                if (arr[i][j] == '*') {
-                    moveWater(i, j); // 물주는거
-                }
+    private static void solution() {
+        waterSpread();
+        findBiber();
+    }
+
+    private static void findBiber() {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(S[0]);
+        q.add(S[1]);
+        biberDist[S[0]][S[1]] = 0;
+
+        while (!q.isEmpty()) {
+            int y = q.poll();
+            int x = q.poll();
+
+            for (int i = 0; i < move.length; i++) {
+                int ny = y + move[i][0];
+                int nx = x + move[i][1];
+
+                if (biberException(ny, nx)) continue;
+                if (biberDist[y][x] + 1 >= waterDist[ny][nx]) continue;
+                q.add(ny);
+                q.add(nx);
+
+                biberDist[ny][nx] = biberDist[y][x] + 1;
             }
         }
     }
 
-    private static void moveS(int y, int x) {
-        for (int i = 0; i < move.length; i++) {
-            int ny = y + move[i][0];
-            int nx = x + move[i][1];
+    private static boolean biberException(int y, int x) {
+        if (y < 0 || x < 0 || y >= R || x >= C) return true;
+        if (biberDist[y][x] != -1) return true;
+        if (arr[y][x] == 'X' || arr[y][x] == '*') return true;
+        return false;
+    }
 
-            if (moveException(ny, nx)) continue;
-            dist[ny][nx] = dist[y][x] + 1;
+    private static void waterSpread() {
+        Queue<Integer> q = new LinkedList<>();
+        waterDist[D[0]][D[1]] = Integer.MAX_VALUE;
+
+        for (int i = 0; i < R; i++) {
+            for (int j = 0; j < C; j++) {
+                if (arr[i][j] == '*') {
+                    q.add(i);
+                    q.add(j);
+                    waterDist[i][j] = 0;
+                }
+            }
+        }
+
+        while (!q.isEmpty()) {
+            int y = q.poll();
+            int x = q.poll();
+
+            for (int i = 0; i < move.length; i++) {
+                int ny = y + move[i][0];
+                int nx = x + move[i][1];
+
+                if (waterException(ny, nx)) continue;
+
+                q.add(ny);
+                q.add(nx);
+
+                waterDist[ny][nx] = waterDist[y][x] + 1;
+            }
         }
     }
 
-    private static boolean moveException(int y, int x) {
+    private static boolean waterException(int y, int x) {
         if (y < 0 || x < 0 || y >= R || x >= C) return true;
-        return arr[y][x] != '.' && arr[y][x] != 'D';
-    }
-
-    private static void moveWater(int y, int x) {
-        for (int i = 0; i < move.length; i++) {
-            int ny = y + move[i][0];
-            int nx = x + move[i][1];
-
-            if (spreadException(ny, nx)) continue;
-
-            arr[ny][nx] = '*';
-        }
-    }
-
-    private static boolean spreadException(int y, int x) {
-        if (y < 0 || x < 0 || y >= R || x >= C) return true;
-        return arr[y][x] != '.';
+        if (waterDist[y][x] != -1 || arr[y][x] != '.') return true;
+        return false;
     }
 
     private static void inputs() throws IOException {
@@ -115,7 +115,8 @@ public class 탈출_3055 {
         R = Integer.parseInt(st.nextToken());
         C = Integer.parseInt(st.nextToken());
         arr = new char[R][C];
-        dist = new int[R][C];
+        waterDist = new int[R][C];
+        biberDist = new int[R][C];
 
         for (int i = 0; i < R; i++) {
             char[] line = br.readLine().toCharArray();
@@ -129,7 +130,8 @@ public class 탈출_3055 {
                     S[1] = j;
                 }
             }
-            Arrays.fill(dist[i], -1);
+            Arrays.fill(waterDist[i], -1);
+            Arrays.fill(biberDist[i], -1);
         }
     }
 }
