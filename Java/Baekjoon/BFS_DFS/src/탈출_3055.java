@@ -73,7 +73,7 @@ public class 탈출_3055 {
                 int nx = x + move[i][1];
 
                 if (biberException(ny, nx)) continue;
-                if (biberDist[y][x] + 1 >= waterDist[ny][nx]) continue;
+                if (biberDist[y][x] + 1 >= waterDist[ny][nx] && waterDist[ny][nx] != -1) continue;
                 q.add(ny);
                 q.add(nx);
 
@@ -84,14 +84,12 @@ public class 탈출_3055 {
 
     private static boolean biberException(int y, int x) {
         if (y < 0 || x < 0 || y >= R || x >= C) return true;
-        if (biberDist[y][x] != -1) return true;
         if (arr[y][x] == 'X' || arr[y][x] == '*') return true;
-        return false;
+        return biberDist[y][x] != -1;
     }
 
     private static void waterSpread() {
         Queue<Integer> q = new LinkedList<>();
-        waterDist[D[0]][D[1]] = (R * C) + 1;
 
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
@@ -124,8 +122,7 @@ public class 탈출_3055 {
     private static boolean waterException(int y, int x) {
         if (y < 0 || x < 0 || y >= R || x >= C) return true;
         if (arr[y][x] != '.') return true;
-        if (waterDist[y][x] != -1) return true;
-        return false;
+        return waterDist[y][x] != -1;
     }
 
     private static void inputs() throws IOException {
