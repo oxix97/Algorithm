@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Baekjoon.iml" filepath="$PROJECT_DIR$/.idea/Baekjoon.iml" />
       <module fileurl="file://$PROJECT_DIR$/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/BinarySearch/BinarySearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/DP/DP.iml" filepath="$PROJECT_DIR$/DP/DP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tree/Tree.iml" filepath="$PROJECT_DIR$/Tree/Tree.iml" />
       <module fileurl="file://$PROJECT_DIR$/TwoPointers/TwoPointers.iml" filepath="$PROJECT_DIR$/TwoPointers/TwoPointers.iml" />
       <module fileurl="file://$PROJECT_DIR$/for문/for문.iml" filepath="$PROJECT_DIR$/for문/for문.iml" />
       <module fileurl="file://$PROJECT_DIR$/if문/if문.iml" filepath="$PROJECT_DIR$/if문/if문.iml" />
