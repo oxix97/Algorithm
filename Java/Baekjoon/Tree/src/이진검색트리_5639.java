@@ -53,13 +53,13 @@ public class 이진검색트리_5639 {
         }
 
         void insert(int n) {
-            if (n < this.n) { // 루트 기준 오른쪽
+            if (n < this.n) { // 루트 기준 왼쪽
                 if (this.left == null) {
                     this.left = new Node(n);
                 } else {
                     this.left.insert(n);
                 }
-            } else { //루트 기준 왼쪽
+            } else { //루트 기준 오른쪽
                 if (this.right == null) {
                     this.right = new Node(n);
                 } else {
