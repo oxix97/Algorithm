@@ -18,22 +18,15 @@ public class 부동산다툼_20364 {
     }
 
     private static void solution() {
-
-        for (int i = 1; i <= Q; i++) {
+        for (int n : ducks) {
             int answer = 0;
-            int tmp = ducks[i];
-            while (tmp != 1) {
-                if (visited[tmp]) {
-                    answer = tmp;
-                    break;
-                }
-                tmp /= 2;
-            }
-            if (answer == 0) {
-                System.out.println("땅 먹음 : "+ducks[i]);
-                visited[ducks[i]] = true;
-            }
+            int tmp = n;
 
+            while (n != 1) {
+                if (visited[n]) answer = n;
+                n >>= 1;
+            }
+            visited[tmp] = true;
             sb.append(answer).append('\n');
         }
     }
@@ -42,9 +35,9 @@ public class 부동산다툼_20364 {
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         Q = Integer.parseInt(st.nextToken());
-        ducks = new int[Q + 1];
+        ducks = new int[Q];
         visited = new boolean[N + 1];
-        for (int i = 1; i <= Q; i++) {
+        for (int i = 0; i < Q; i++) {
             ducks[i] = Integer.parseInt(br.readLine());
         }
     }
