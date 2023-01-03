@@ -20,6 +20,12 @@ public class 트리_1068 {
     }
 
     private static void solution() {
+
+        for (int i = 0; i < N; i++) {
+            if (tree[i].contains(erase)) {
+                tree[i].remove(tree[i].indexOf(erase));
+            }
+        }
         if (root != erase)
             dfs(root);
 
@@ -27,8 +33,6 @@ public class 트리_1068 {
     }
 
     private static void dfs(int n) {
-        if (n == erase) return;
-
         if (tree[n].isEmpty()) {
             leaf[n] = 1;
         }
