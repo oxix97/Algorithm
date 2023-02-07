@@ -23,6 +23,12 @@ public class Strahler순서_9470 {
             sb.append(i).append(' ').append(result[M]).append('\n');
         }
         System.out.println(sb);
+        System.out.println("----");
+        sb = new StringBuilder();
+        for (int x : result) {
+            sb.append(x).append(' ');
+        }
+        System.out.println(sb);
     }
 
     private static void solution() {
