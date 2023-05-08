@@ -21,6 +21,7 @@ public class 주몽_1940 {
         inputs();
         solution();
         output();
+        br.close();
     }
 
     private static void solution() {
