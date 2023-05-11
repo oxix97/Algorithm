@@ -56,9 +56,7 @@ public class 미로탐색_BFS_2178 {
                 int ix = idx[0] + nx;
                 int iy = idx[1] + ny;
 
-                if (ix < 0 || iy < 0 || ix >= N || iy >= M) continue;
-                if (maze[ix][iy] == 0) continue;
-                if (visited[ix][iy]) continue;
+                if (checkExceptions(ix, iy)) continue;
 
                 q.add(ix);
                 q.add(iy);
@@ -67,6 +65,14 @@ public class 미로탐색_BFS_2178 {
                 maze[ix][iy] = maze[nx][ny] + 1;
             }
         }
+    }
+
+    private static boolean checkExceptions(int ix, int iy) {
+        if (ix < 0 || iy < 0 || ix >= N || iy >= M) return true;
+        else if (maze[ix][iy] == 0) return true;
+        else if (visited[ix][iy]) return true;
+
+        return false;
     }
 
     private static void output() {
