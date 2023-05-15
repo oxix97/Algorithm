@@ -33,20 +33,24 @@ public class 소수팰린드롬_1747 {
 
     private static void solution() {
         selectPrimeNumber();
-        for (int i = N; i <= 10_000_000; i++) {
-            if (arr[i]) continue;
-            String str = String.valueOf(i);
-            if (str.equals(new StringBuffer(str).reverse().toString())) {
-                sb.append(str);
-                break;
-            }
-        }
+        isPalindrome();
     }
 
     private static void selectPrimeNumber() {
         for (int i = 2; i <= 10_000_000; i++) {
             for (int j = i + i; j <= 10_000_000; j += i) {
                 arr[j] = true;
+            }
+        }
+    }
+
+    private static void isPalindrome() {
+        for (int i = N; i <= 10_000_000; i++) {
+            if (arr[i]) continue;
+            String str = String.valueOf(i);
+            if (str.equals(new StringBuffer(str).reverse().toString())) {
+                sb.append(str);
+                break;
             }
         }
     }
