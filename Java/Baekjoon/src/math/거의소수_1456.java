@@ -44,7 +44,7 @@ public class 거의소수_1456 {
             long tmp = i;
             while ((tmp *= i) <= B) {
                 if (tmp >= A) ++cnt;
-                if (checkOverflow(i, tmp)) break;
+                if (checkOverflow(i, tmp)) break; // long형의 오버플로우를 방지하기 위한 메서드
             }
         }
         sb.append(cnt);
