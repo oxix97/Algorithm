@@ -36,6 +36,7 @@ public class 소수구하기_1929 {
         // N이 a*b라고 하는 경우 a,b 모두 sqrt(N)보다 큰 약수를 가질 수 없기 때문
         // 1 * 16, 2 * 8, 4 * 4, 8 * 2, 16 * 1
         // 대칭성을 보이며 이는 중간까지만 검사해도 전체를 검사할 수 있음을 증명한다.
+        arr[1] = true;
         for (int i = 2; i <= Math.sqrt(N); i++) {
             if (arr[i]) continue;
             for (int j = i + i; j <= N; j += i) {
@@ -44,7 +45,9 @@ public class 소수구하기_1929 {
         }
 
         for (int i = M; i <= N; i++) {
-            if (!arr[i]) appendVertical(i);
+            if (!arr[i]) {
+                appendVertical(i);
+            }
         }
     }
 
