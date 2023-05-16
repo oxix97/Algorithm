@@ -3,9 +3,7 @@ package src.graph.dfs;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class 효율적인해킹_1325 {
     //1. 각 입력값들의 파라미터 정리
@@ -21,7 +19,6 @@ public class 효율적인해킹_1325 {
     static boolean[] visited;
     static ArrayList<Integer>[] list;
     static int[] answer;
-    static int cnt;
 
     public static void main(String[] args) throws IOException {
         inputs();
@@ -47,29 +44,37 @@ public class 효율적인해킹_1325 {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            list[b].add(a);
+            list[a].add(b);
         }
     }
 
     private static void solution() {
         int max = 0;
         for (int i = 1; i <= N; i++) {
-            dfs(i, 0);
-            answer[i] = cnt;
-            max = Math.max(max, cnt);
+            bfs(i);
             Arrays.fill(visited, false);
+        }
+
+        for (int i = 1; i <= N; i++) {
+            if (max > answer[i]) continue;
+            max = answer[i];
         }
         output(max);
     }
 
-    private static void dfs(int n, int count) {
+    private static void bfs(int n) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(n);
         visited[n] = true;
-        cnt = count + 1;
-        if (N == cnt) return;
 
-        for (int nx : list[n]) {
-            if (!visited[nx]) {
-                dfs(nx, cnt);
+        while (!q.isEmpty()) {
+            int x = q.poll();
+            for (int nx : list[x]) {
+                if (!visited[nx]) {
+                    visited[nx] = true;
+                    q.add(nx);
+                    answer[nx]++;
+                }
             }
         }
     }
@@ -79,11 +84,7 @@ public class 효율적인해킹_1325 {
             if (max == answer[i])
                 appendHorizontal(i);
         }
-        System.out.print(sb.toString());
-    }
-
-    private static void appendVertical(Object obj) {
-        sb.append(obj).append('\n');
+        System.out.print(sb);
     }
 
     private static void appendHorizontal(Object obj) {
