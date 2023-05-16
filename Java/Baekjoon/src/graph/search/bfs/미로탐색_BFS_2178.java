@@ -1,4 +1,4 @@
-package src.search.bfs;
+package src.graph.search.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;

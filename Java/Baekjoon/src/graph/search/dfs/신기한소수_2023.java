@@ -1,4 +1,4 @@
-package src.search.dfs;
+package src.graph.search.dfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
