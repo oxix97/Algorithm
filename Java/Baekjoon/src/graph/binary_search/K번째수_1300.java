@@ -1,4 +1,4 @@
-package src.graph.search.binary_search;
+package src.graph.binary_search;
 
 import java.io.BufferedReader;
 import java.io.IOException;
