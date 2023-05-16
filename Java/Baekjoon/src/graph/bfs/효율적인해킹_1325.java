@@ -6,12 +6,6 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class 효율적인해킹_1325 {
-    //1. 각 입력값들의 파라미터 정리
-    //2. 시간복잡도, 공간복잡도 계산
-    //3. 올바른 풀이방법 설정 이후 부가적으로 필요한 파라미터가 있는지 체크
-    //4. 단계별로 sudo 코드 작성
-    //5. 구현
-    //6. 오류 발생시 디버그를 활용하거나 자료형 확인
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringBuilder sb = new StringBuilder();
     static StringTokenizer st;
@@ -49,17 +43,12 @@ public class 효율적인해킹_1325 {
     }
 
     private static void solution() {
-        int max = 0;
         for (int i = 1; i <= N; i++) {
             bfs(i);
             Arrays.fill(visited, false);
         }
 
-        for (int i = 1; i <= N; i++) {
-            if (max > answer[i]) continue;
-            max = answer[i];
-        }
-        output(max);
+        output(getMax());
     }
 
     private static void bfs(int n) {
@@ -85,6 +74,15 @@ public class 효율적인해킹_1325 {
                 appendHorizontal(i);
         }
         System.out.print(sb);
+    }
+
+    private static int getMax() {
+        int max = 0;
+        for (int i = 1; i <= N; i++) {
+            if (max > answer[i]) continue;
+            max = answer[i];
+        }
+        return max;
     }
 
     private static void appendHorizontal(Object obj) {
