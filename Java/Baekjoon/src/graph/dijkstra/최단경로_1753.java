@@ -27,7 +27,7 @@ public class 최단경로_1753 {
         list = new ArrayList[V + 1];
         visited = new boolean[V + 1];
 
-        for (int i = 0; i <= E; i++) {
+        for (int i = 0; i <= V; i++) {
             list[i] = new ArrayList<>();
         }
 
