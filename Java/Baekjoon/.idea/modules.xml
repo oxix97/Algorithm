@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/1차원배열/1차원배열.iml" filepath="$PROJECT_DIR$/1차원배열/1차원배열.iml" />
       <module fileurl="file://$PROJECT_DIR$/BFS_DFS/BFS_DFS.iml" filepath="$PROJECT_DIR$/BFS_DFS/BFS_DFS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Baekjoon.iml" filepath="$PROJECT_DIR$/.idea/Baekjoon.iml" />
       <module fileurl="file://$PROJECT_DIR$/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/BinarySearch/BinarySearch.iml" />
@@ -10,14 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/Graph/Graph.iml" filepath="$PROJECT_DIR$/Graph/Graph.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tree/Tree.iml" filepath="$PROJECT_DIR$/Tree/Tree.iml" />
       <module fileurl="file://$PROJECT_DIR$/TwoPointers/TwoPointers.iml" filepath="$PROJECT_DIR$/TwoPointers/TwoPointers.iml" />
-      <module fileurl="file://$PROJECT_DIR$/for문/for문.iml" filepath="$PROJECT_DIR$/for문/for문.iml" />
-      <module fileurl="file://$PROJECT_DIR$/if문/if문.iml" filepath="$PROJECT_DIR$/if문/if문.iml" />
-      <module fileurl="file://$PROJECT_DIR$/while문/while문.iml" filepath="$PROJECT_DIR$/while문/while문.iml" />
       <module fileurl="file://$PROJECT_DIR$/그리디알고리즘/그리디알고리즘.iml" filepath="$PROJECT_DIR$/그리디알고리즘/그리디알고리즘.iml" />
-      <module fileurl="file://$PROJECT_DIR$/기초수학1/기초수학1.iml" filepath="$PROJECT_DIR$/기초수학1/기초수학1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/기초수학2/기초수학2.iml" filepath="$PROJECT_DIR$/기초수학2/기초수학2.iml" />
       <module fileurl="file://$PROJECT_DIR$/동적계획법1/동적계획법1.iml" filepath="$PROJECT_DIR$/동적계획법1/동적계획법1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/문자열/문자열.iml" filepath="$PROJECT_DIR$/문자열/문자열.iml" />
       <module fileurl="file://$PROJECT_DIR$/문제들/문제들.iml" filepath="$PROJECT_DIR$/문제들/문제들.iml" />
       <module fileurl="file://$PROJECT_DIR$/백트레킹/백트레킹.iml" filepath="$PROJECT_DIR$/백트레킹/백트레킹.iml" />
       <module fileurl="file://$PROJECT_DIR$/브루트포스/브루트포스.iml" filepath="$PROJECT_DIR$/브루트포스/브루트포스.iml" />
