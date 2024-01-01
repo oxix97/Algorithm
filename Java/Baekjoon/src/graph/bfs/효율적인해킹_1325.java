@@ -11,12 +11,15 @@ public class 효율적인해킹_1325 {
     static StringTokenizer st;
     static int N, M; // 컴퓨터 수(노드) / 관계 수 (간선)
     static boolean[] visited;
-    static ArrayList<Integer>[] list;
-    static int[] answer;
+    static int answer = Integer.MIN_VALUE;
+    static int cnt;
+    static int[] result;
+    static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         inputs();
         solution();
+        output();
         br.close();
     }
 
@@ -24,31 +27,37 @@ public class 효율적인해킹_1325 {
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-
+        result = new int[N + 1];
         visited = new boolean[N + 1];
-        answer = new int[N + 1];
-        list = new ArrayList[N + 1];
-
+        list = new ArrayList<>();
         for (int i = 0; i <= N; i++) {
-            list[i] = new ArrayList<>();
+            list.add(new ArrayList<>());
         }
 
         for (int i = 1; i <= M; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-
-            list[a].add(b);
+            list.get(b).add(a);
         }
     }
 
     private static void solution() {
         for (int i = 1; i <= N; i++) {
-            bfs(i);
             Arrays.fill(visited, false);
+            cnt = 0;
+            bfs(i);
+            result[i] = cnt;
+            answer = Math.max(answer, cnt);
         }
+    }
 
-        output(getMax());
+    private static void output() {
+        for (int i = 1; i <= N; i++) {
+            if (result[i] == answer)
+                sb.append(i).append(" ");
+        }
+        System.out.println(sb);
     }
 
     private static void bfs(int n) {
@@ -58,34 +67,13 @@ public class 효율적인해킹_1325 {
 
         while (!q.isEmpty()) {
             int x = q.poll();
-            for (int nx : list[x]) {
+            for (int nx : list.get(x)) {
                 if (!visited[nx]) {
                     visited[nx] = true;
                     q.add(nx);
-                    answer[nx]++;
+                    ++cnt;
                 }
             }
         }
-    }
-
-    private static void output(int max) {
-        for (int i = 1; i <= N; i++) {
-            if (max == answer[i])
-                appendHorizontal(i);
-        }
-        System.out.print(sb);
-    }
-
-    private static int getMax() {
-        int max = 0;
-        for (int i = 1; i <= N; i++) {
-            if (max > answer[i]) continue;
-            max = answer[i];
-        }
-        return max;
-    }
-
-    private static void appendHorizontal(Object obj) {
-        sb.append(obj).append(' ');
     }
 }
